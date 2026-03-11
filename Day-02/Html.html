@@ -1,0 +1,2199 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Html 1</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="320e6cdd-cb30-804d-acbe-d62260eb6b65" class="page sans"><header><h1 class="page-title" dir="auto">Html 1</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><h1 id="320e6cdd-cb30-80f6-b284-c78174d3a18c" class="">1. Context: What is HTML?</h1></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8004-a584-cc899eb338eb" class="">HTML (HyperText Markup Language) is the language used to <strong>structure a web page</strong>.</p></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8099-b2e1-d9359f97873c" class="">A typical HTML page looks like this:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-80d1-a134-cd408ddaff9b" class="code code-wrap"><code class="language-HTML" style="white-space:pre-wrap;word-break:break-all">&lt;html&gt;
+   &lt;head&gt;
+       &lt;!-- page information --&gt;
+   &lt;/head&gt;
+
+   &lt;body&gt;
+       &lt;!-- visible content --&gt;
+   &lt;/body&gt;
+&lt;/html&gt;</code></pre></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-80cc-8a5b-e9ab2f6f3695" class="">Important:</p></div><div style="display:contents" dir="auto"><ul id="320e6cdd-cb30-8095-9a35-c9e7a0e24d2b" class="bulleted-list"><li style="list-style-type:disc"><strong>Head</strong> → information about the page (title, metadata, CSS…)</li></ul></div><div style="display:contents" dir="auto"><ul id="320e6cdd-cb30-809b-a58c-ef882d9f574c" class="bulleted-list"><li style="list-style-type:disc"><strong>Body</strong> → the content the user sees (text, images, links, etc.)</li></ul></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-808f-877e-e672acaaaed5" class="">Everything you studied in the notes is mainly about <strong>elements used inside the </strong><code><strong>&lt;body&gt;</strong></code>.</p></div><div style="display:contents" dir="auto"><hr id="320e6cdd-cb30-80e1-95c2-fe14af6ffee3"/></div><div style="display:contents" dir="auto"><h1 id="320e6cdd-cb30-80f8-82cc-ee818558c4aa" class="">2. Headings (Titles)</h1></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-805b-94de-ee9afc6aff8d" class="">HTML provides <strong>6 levels of titles</strong>.</p></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-802b-9ff8-e663672edb00" class="">They are used to organize content like chapters in a book.</p></div><div style="display:contents" dir="auto"><h3 id="320e6cdd-cb30-809e-951f-f34b08695bb2" class="">Syntax</h3></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-8071-9b60-c35ac31abdc6" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;h1&gt;Title&lt;/h1&gt;
+&lt;h2&gt;Title&lt;/h2&gt;
+&lt;h3&gt;Title&lt;/h3&gt;
+&lt;h4&gt;Title&lt;/h4&gt;
+&lt;h5&gt;Title&lt;/h5&gt;
+&lt;h6&gt;Title&lt;/h6&gt;</code></pre></div><div style="display:contents" dir="auto"><h3 id="320e6cdd-cb30-8048-9dcc-df2fdcfc640e" class="">Example</h3></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-808e-8d67-c018d7b7c929" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;h1&gt;Main Title&lt;/h1&gt;
+&lt;h2&gt;Section&lt;/h2&gt;
+&lt;h3&gt;Subsection&lt;/h3&gt;</code></pre></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-80ae-b0dc-d992871225a7" class="">Result:</p></div><div style="display:contents" dir="auto"><ul id="320e6cdd-cb30-80e3-a196-c89fdc0c64d3" class="bulleted-list"><li style="list-style-type:disc"><code>&lt;h1&gt;</code> → biggest title</li></ul></div><div style="display:contents" dir="auto"><ul id="320e6cdd-cb30-8047-b979-f6570b70f446" class="bulleted-list"><li style="list-style-type:disc"><code>&lt;h6&gt;</code> → smallest title</li></ul></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8082-8898-f34b2547eb5f" class="">Example:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-8042-bf8e-f596ed3cca1e" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;h1&gt;Adel&lt;/h1&gt;
+&lt;h2&gt;Mohamed&lt;/h2&gt;</code></pre></div><div style="display:contents" dir="auto"><hr id="320e6cdd-cb30-8046-8fa3-dd36c04e49c3"/></div><div style="display:contents" dir="auto"><h1 id="320e6cdd-cb30-807d-9edc-c885381025ae" class="">3. Horizontal Line <code>&lt;hr&gt;</code></h1></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-80d3-8515-eaedf69748f9" class="">This tag creates a <strong>horizontal line</strong> to separate content.</p></div><div style="display:contents" dir="auto"><h3 id="320e6cdd-cb30-80b3-ab15-e56d661b2cf9" class="">Syntax</h3></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-8035-a270-c59c27116fe9" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;hr&gt;</code></pre></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8030-aef6-f14873b5a535" class="">Example:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-80cb-be02-c7fac5365fdf" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;h1&gt;Chapter 1&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;Text of the chapter&lt;/p&gt;</code></pre></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8076-8c45-da9006e0950d" class="">Result: a line separating sections.</p></div><div style="display:contents" dir="auto"><hr id="320e6cdd-cb30-801a-a97d-fd38b2d84e9e"/></div><div style="display:contents" dir="auto"><h1 id="320e6cdd-cb30-808d-833e-c8a0c1cdfdc0" class="">4. Block vs Inline Elements</h1></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8090-bef6-d3fdd06fb5c6" class="">HTML elements behave in <strong>two main ways</strong>.</p></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-808b-8234-e964009c9bd5" class="">This is related to the <strong>display property in CSS</strong>.</p></div><div style="display:contents" dir="auto"><hr id="320e6cdd-cb30-80ef-9c60-f6f60827bf7e"/></div><div style="display:contents" dir="auto"><h2 id="320e6cdd-cb30-8036-8710-c3a631e719dc" class="">4.1 Inline Elements</h2></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-80ba-a191-ce8b39c1c223" class="">Inline elements stay <strong>on the same line</strong>.</p></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8068-996d-d1cefa178d49" class="">They only take the <strong>space they need</strong>.</p></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-80b3-bdd2-edae056a955a" class="">Example elements:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-80b8-98e4-d44ba90123f5" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;span&gt;
+&lt;img&gt;
+&lt;a&gt;</code></pre></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-807d-9e9d-dd417ffa8b1d" class="">Example:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-807c-9672-cb3104a20776" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">This is &lt;span&gt;inline text&lt;/span&gt; example</code></pre></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-80c3-9df3-f1eef822005b" class="">Result: everything stays on <strong>one line</strong>.</p></div><div style="display:contents" dir="auto"><hr id="320e6cdd-cb30-808d-a1e7-d67dcbd83135"/></div><div style="display:contents" dir="auto"><h2 id="320e6cdd-cb30-8062-97c3-f1cc65a820b3" class="">4.2 Block Elements</h2></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-808b-a490-edc7d0ade6c1" class="">Block elements start on a <strong>new line</strong>.</p></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8065-b095-edb7d0fd4e18" class="">They usually take the <strong>full width</strong>.</p></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8011-8deb-cb5e701057a9" class="">Examples:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-808b-ade4-e4d0d04c5226" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;p&gt;
+&lt;div&gt;
+&lt;h1&gt;
+&lt;hr&gt;</code></pre></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8025-aae7-e533518c0598" class="">Example:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-8096-af0f-f3bcaa231c9c" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;p&gt;Paragraph 1&lt;/p&gt;
+&lt;p&gt;Paragraph 2&lt;/p&gt;</code></pre></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-80f5-9acb-f3db2c4d4241" class="">Each paragraph appears on <strong>a new line</strong>.</p></div><div style="display:contents" dir="auto"><hr id="320e6cdd-cb30-80e6-83f0-d02799ee55ec"/></div><div style="display:contents" dir="auto"><h1 id="320e6cdd-cb30-809d-a7ea-dfb080657f1f" class="">5. Line Break <code>&lt;br&gt;</code></h1></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8021-9131-d808ed9e7c86" class="">This tag creates a <strong>new line inside text</strong>.</p></div><div style="display:contents" dir="auto"><h3 id="320e6cdd-cb30-801d-b507-c08818ef673d" class="">Syntax</h3></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-804b-aedb-db7b37418b38" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;br&gt;</code></pre></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-80b6-b99f-fb94c0c7130c" class="">Example:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-8016-9bc7-f89e0bff1358" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">Hello&lt;br&gt;
+World</code></pre></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8094-acf3-dcc09ed0dd5e" class="">Result:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-8001-82a2-db8556f93cc1" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">Hello
+World</code></pre></div><div style="display:contents" dir="auto"><hr id="320e6cdd-cb30-8009-aabe-dcf28880022d"/></div><div style="display:contents" dir="auto"><h1 id="320e6cdd-cb30-80fc-ae64-da5fc988607a" class="">6. Image Element <code>&lt;img&gt;</code></h1></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8080-92d4-ccbf65ecb97c" class="">The <code>&lt;img&gt;</code> tag is used to <strong>display images</strong>.</p></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-80ec-b2cc-f62445223c13" class="">Important:</p></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-80e0-b3ae-cd60923a520d" class=""><code>img</code> is a <strong>self-closing tag</strong>.</p></div><div style="display:contents" dir="auto"><h3 id="320e6cdd-cb30-80d3-b556-f957b64eb38f" class="">Basic Syntax</h3></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-8096-9ce9-c8e6cf2c9c30" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;img src=&quot;image.jpg&quot;&gt;</code></pre></div><div style="display:contents" dir="auto"><hr id="320e6cdd-cb30-80bb-a9b7-d3b7e9d48a96"/></div><div style="display:contents" dir="auto"><h2 id="320e6cdd-cb30-8072-a00c-d6e11892d940" class="">6.1 Important Attributes of <code>&lt;img&gt;</code></h2></div><div style="display:contents" dir="auto"><h3 id="320e6cdd-cb30-80c7-8f31-d9e26ba1efbf" class="">1. src</h3></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8053-93b0-cf656411731e" class="">Defines the <strong>path of the image</strong>.</p></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8072-9080-d601ec940192" class="">Example:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-8059-be13-d656d63a88aa" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;img src=&quot;photo.jpg&quot;&gt;</code></pre></div><div style="display:contents" dir="auto"><hr id="320e6cdd-cb30-8055-be57-e9318b7ab03c"/></div><div style="display:contents" dir="auto"><h3 id="320e6cdd-cb30-806e-8ab6-fdfa5332055d" class="">2. width and height</h3></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-800f-9e5c-c49605df5b0c" class="">Define image size.</p></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-80e3-8008-f8ce18c7d374" class="">Example:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-8059-8fd7-d04f78358387" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;img src=&quot;photo.jpg&quot; width=&quot;200&quot; height=&quot;150&quot;&gt;</code></pre></div><div style="display:contents" dir="auto"><hr id="320e6cdd-cb30-8040-a071-cd8da9986278"/></div><div style="display:contents" dir="auto"><h3 id="320e6cdd-cb30-80e0-aac3-e300eac73aca" class="">3. alt</h3></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-80d3-8ff3-db89428a17ab" class="">Alternative text if the image cannot load.</p></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8042-b539-c4d75068985c" class="">Example:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-80d7-b059-e89f6c04fcb9" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;img src=&quot;photo.jpg&quot; alt=&quot;profile picture&quot;&gt;</code></pre></div><div style="display:contents" dir="auto"><hr id="320e6cdd-cb30-8039-8df3-e85cb2be5e61"/></div><div style="display:contents" dir="auto"><h1 id="320e6cdd-cb30-80bf-9403-f002001473f6" class="">7. Links <code>&lt;a&gt;</code></h1></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8072-ae24-d3f12c782da4" class="">Links allow users to <strong>navigate to another page or website</strong>.</p></div><div style="display:contents" dir="auto"><h3 id="320e6cdd-cb30-8026-8903-fbbc0c642c1a" class="">Syntax</h3></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-8037-b8db-c72c36f16906" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;a href=&quot;URL&quot;&gt;Text&lt;/a&gt;</code></pre></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-80e8-ac71-e9c9efc64953" class="">Example:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-8022-8c36-e3fd7fcbff02" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;a href=&quot;http://www.google.com&quot;&gt;Google&lt;/a&gt;</code></pre></div><div style="display:contents" dir="auto"><hr id="320e6cdd-cb30-80ed-93c3-dc2b9ba0a708"/></div><div style="display:contents" dir="auto"><h1 id="320e6cdd-cb30-8084-a213-ed53dc615fd0" class="">8. Opening Links in New Tab</h1></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-80fc-abbf-d11a64d5498b" class="">You can open a link in a <strong>new tab</strong> using <code>target</code>.</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-80f8-ac82-f5f4868836ae" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;a href=&quot;http://google.com&quot; target=&quot;_blank&quot;&gt;Google&lt;/a&gt;</code></pre></div><div style="display:contents" dir="auto"><hr id="320e6cdd-cb30-8073-9874-d04164d55dde"/></div><div style="display:contents" dir="auto"><h1 id="320e6cdd-cb30-80a3-a46e-e0eae18d3efa" class="">9. Link Title Attribute</h1></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8043-971a-d76bd9212d1b" class="">The <code>title</code> attribute shows a tooltip.</p></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-800b-ade5-ed67a245fccf" class="">Example:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-805c-8a6a-f24485285f3c" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;a href=&quot;http://google.com&quot; title=&quot;Go to Google&quot;&gt;Google&lt;/a&gt;</code></pre></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8080-a758-ffac1ca8ed10" class="">When you hover the mouse → text appears.</p></div><div style="display:contents" dir="auto"><hr id="320e6cdd-cb30-8042-a058-ce7ed9cbe337"/></div><div style="display:contents" dir="auto"><h1 id="320e6cdd-cb30-806f-bccb-c14b188520f1" class="">10. Using an Image as a Link</h1></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8083-940c-eb49a153ce8a" class="">You can place an image <strong>inside a link</strong>.</p></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-803f-bb41-d00e682b7d6f" class="">Example:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-8095-89b0-f50ff16e1f38" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;a href=&quot;http://google.com&quot;&gt;
+   &lt;img src=&quot;logo.png&quot;&gt;
+&lt;/a&gt;</code></pre></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-804c-a4cf-dbc2b46dfbd4" class="">When the user clicks the image → it opens Google.</p></div><div style="display:contents" dir="auto"><hr id="320e6cdd-cb30-8041-8a6e-d04e22a6aadf"/></div><div style="display:contents" dir="auto"><h1 id="320e6cdd-cb30-80ef-b2a6-f552d07fb225" class="">11. Internal Links (Inside the Same Page)</h1></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-80d2-ba44-fd077c0bce78" class="">You can link to a <strong>specific section</strong> of the page.</p></div><div style="display:contents" dir="auto"><h3 id="320e6cdd-cb30-80a4-a7e3-f42ae40829b3" class="">Step 1 — Create an ID</h3></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-80e8-a243-fd95c6249501" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;img id=&quot;tim&quot; src=&quot;tim.jpg&quot;&gt;</code></pre></div><div style="display:contents" dir="auto"><h3 id="320e6cdd-cb30-80fa-a4df-c7dcb9b84626" class="">Step 2 — Create the link</h3></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-808b-8f23-f30c738b3b6d" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;a href=&quot;#tim&quot;&gt;Go to image&lt;/a&gt;</code></pre></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8099-9d46-fc4aa758e608" class=""><code>#</code> means jump to the <strong>element with that ID</strong>.</p></div><div style="display:contents" dir="auto"><hr id="320e6cdd-cb30-804a-96f6-d5eeb5aca38b"/></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Html 2</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="320e6cdd-cb30-80b9-9f8c-f0deafef342f" class="page sans"><header><h1 class="page-title" dir="auto">Html 2</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><h1 id="320e6cdd-cb30-8030-b2ef-f187760d31b8" class="">1. Unordered List (UL)</h1></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8017-a005-e79434c41b3d" class="">An <strong>unordered list</strong> shows items using <strong>bullets</strong> instead of numbers.</p></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-803d-8d3c-dd4dfcb73f62" class="">It is used when <strong>order does not matter</strong>.</p></div><div style="display:contents" dir="auto"><hr id="320e6cdd-cb30-8027-be53-d6a97f0764b4"/></div><div style="display:contents" dir="auto"><h2 id="320e6cdd-cb30-802b-8867-ef9c37db5a6b" class="">1.1 Basic Syntax</h2></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8025-8e36-fd7e60398fd9" class="">A list uses two elements:</p></div><div style="display:contents" dir="auto"><ul id="320e6cdd-cb30-808b-800a-fca92f0b7f61" class="bulleted-list"><li style="list-style-type:disc"><code>&lt;ul&gt;</code> → the list container</li></ul></div><div style="display:contents" dir="auto"><ul id="320e6cdd-cb30-80c0-9eac-f48f0b5aed82" class="bulleted-list"><li style="list-style-type:disc"><code>&lt;li&gt;</code> → list item</li></ul></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-80ed-ad3b-cd976ffecdaa" class="">Example:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-8014-b00f-f68dce19b8fa" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;ul&gt;
+   &lt;li&gt;Java&lt;/li&gt;
+   &lt;li&gt;PHP&lt;/li&gt;
+   &lt;li&gt;CSS&lt;/li&gt;
+   &lt;li&gt;C#&lt;/li&gt;
+   &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;</code></pre></div><div style="display:contents" dir="auto"><hr id="320e6cdd-cb30-80d4-aa05-e4901e83695a"/></div><div style="display:contents" dir="auto"><h1 id="320e6cdd-cb30-80f0-b761-df5d39c035dd" class="">2. Changing Bullet Style</h1></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-80b6-a2e5-ccb165afff82" class="">HTML allows different bullet styles using the <strong>type attribute</strong>.</p></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8097-ac2e-e7f325dea546" class="">Example:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-802c-8229-df82f165d97a" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;ul type=&quot;disc&quot;&gt;
+&lt;ul type=&quot;square&quot;&gt;
+&lt;ul type=&quot;circle&quot;&gt;</code></pre></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-80f0-8133-d9aa5fd7ef8a" class="">Possible bullet styles:</p></div><div style="display:contents" dir="ltr"><table id="320e6cdd-cb30-80b5-808a-fc533991280e" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="320e6cdd-cb30-80d9-b38e-cd64ed6242fe"><th id="nP&lt;w" class="simple-table-header-color simple-table-header">type</th><th id="btcH" class="simple-table-header-color simple-table-header">result</th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="320e6cdd-cb30-80ba-8bf1-c06328aa82c3"><td id="nP&lt;w" class="">disc</td><td id="btcH" class="">●</td></tr></div><div style="display:contents" dir="ltr"><tr id="320e6cdd-cb30-8092-bf60-f91241f5da01"><td id="nP&lt;w" class="">circle</td><td id="btcH" class="">○</td></tr></div><div style="display:contents" dir="ltr"><tr id="320e6cdd-cb30-8098-a31b-e4623f867aaa"><td id="nP&lt;w" class="">square</td><td id="btcH" class="">■</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><hr id="320e6cdd-cb30-8066-9dde-d97717053f37"/></div><div style="display:contents" dir="auto"><h1 id="320e6cdd-cb30-802a-bf58-f25f16d2b824" class="">3. Ordered List (OL)</h1></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-807f-8c8c-e53e5647287e" class="">An <strong>ordered list</strong> shows items with <strong>numbers or letters</strong>.</p></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8073-b83f-eb16066f2c4c" class="">It is used when <strong>order matters</strong>.</p></div><div style="display:contents" dir="auto"><hr id="320e6cdd-cb30-800d-80a6-c5eb9ffe356a"/></div><div style="display:contents" dir="auto"><h2 id="320e6cdd-cb30-8012-b87b-fa1796c90c3f" class="">5.1 Basic Syntax</h2></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-802b-9ef2-d3c3bf01b917" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;ol&gt;
+   &lt;li&gt;Java&lt;/li&gt;
+   &lt;li&gt;C#&lt;/li&gt;
+   &lt;li&gt;PHP&lt;/li&gt;
+   &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ol&gt;</code></pre></div><div style="display:contents" dir="auto"><hr id="320e6cdd-cb30-8031-a823-ee3e90d161df"/></div><div style="display:contents" dir="auto"><h1 id="320e6cdd-cb30-8036-ab6f-e9162b457563" class="">4. Ordered List Types</h1></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-808b-b28e-d1015010935d" class="">The numbering style can change using the <strong>type attribute</strong>.</p></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-80a2-badc-f54b88f8bedc" class="">Example:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-80a7-b36a-cdc674ac596a" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;ol type=&quot;1&quot;&gt;   numbers
+&lt;ol type=&quot;A&quot;&gt;   capital letters
+&lt;ol type=&quot;a&quot;&gt;   small letters
+&lt;ol type=&quot;I&quot;&gt;   roman numerals
+&lt;ol type=&quot;i&quot;&gt;   small roman numerals</code></pre></div><div style="display:contents" dir="auto"><hr id="320e6cdd-cb30-8058-b0d0-d24bd7ebd263"/></div><div style="display:contents" dir="auto"><h1 id="320e6cdd-cb30-8007-a213-c52fb9f9a2fc" class="">5. Starting Number</h1></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-80a1-9a5b-c872cbaf23c5" class="">You can choose where numbering <strong>starts</strong>.</p></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-80c3-8d17-d6c56cb263e8" class="">Example:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-8067-81e5-eb4c824db086" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;ol start=&quot;50&quot;&gt;
+   &lt;li&gt;Java&lt;/li&gt;
+   &lt;li&gt;PHP&lt;/li&gt;
+&lt;/ol&gt;</code></pre></div><div style="display:contents" dir="auto"><hr id="320e6cdd-cb30-8038-bae1-c461f8757a4e"/></div><div style="display:contents" dir="auto"><h1 id="320e6cdd-cb30-80a0-870c-d65cfc0fc155" class="">6. Reverse Order</h1></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-80a1-8e8a-eedce0b3bd34" class="">You can reverse numbering using:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-80fa-bdca-fdb04f2d2b3d" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;ol reversed&gt;</code></pre></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-80cc-bc16-f583e866ef7f" class="">Example:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-80fa-b0f6-f1d216d46b2b" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;ol reversed&gt;
+   &lt;li&gt;Java&lt;/li&gt;
+   &lt;li&gt;PHP&lt;/li&gt;
+   &lt;li&gt;CSS&lt;/li&gt;
+&lt;/ol&gt;</code></pre></div><div style="display:contents" dir="auto"><hr id="320e6cdd-cb30-8067-8cc5-c1f094aecaad"/></div><div style="display:contents" dir="auto"><h1 id="320e6cdd-cb30-8072-a331-dd1c86ff8aaf" class="">7. Description List (DL)</h1></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8077-8799-de72c73d54a4" class="">A <strong>description list</strong> is used for <strong>terms and explanations</strong>.</p></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8033-bcce-df683536fec9" class="">Example:</p></div><div style="display:contents" dir="auto"><ul id="320e6cdd-cb30-8065-9f7a-ef1a62c0eebd" class="bulleted-list"><li style="list-style-type:disc">dictionary</li></ul></div><div style="display:contents" dir="auto"><ul id="320e6cdd-cb30-8001-86e6-ec3e2a4b8531" class="bulleted-list"><li style="list-style-type:disc">glossary</li></ul></div><div style="display:contents" dir="auto"><ul id="320e6cdd-cb30-8005-8111-e3b4f60e49f6" class="bulleted-list"><li style="list-style-type:disc">definitions</li></ul></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8017-bbe0-df8b4f322e9a" class="">It uses <strong>3 elements</strong>.</p></div><div style="display:contents" dir="ltr"><table id="320e6cdd-cb30-8022-9bf5-e7e32bea5c4d" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="320e6cdd-cb30-808f-b049-ee67917fb772"><th id="N_wI" class="simple-table-header-color simple-table-header">Tag</th><th id="ZRvy" class="simple-table-header-color simple-table-header">Meaning</th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="320e6cdd-cb30-802a-ae4b-f2ad21aec41b"><td id="N_wI" class=""><code>&lt;dl&gt;</code></td><td id="ZRvy" class="">description list</td></tr></div><div style="display:contents" dir="ltr"><tr id="320e6cdd-cb30-802d-9c92-efa6c2f5ecd5"><td id="N_wI" class=""><code>&lt;dt&gt;</code></td><td id="ZRvy" class="">term</td></tr></div><div style="display:contents" dir="ltr"><tr id="320e6cdd-cb30-8045-8f72-effc28f5f68d"><td id="N_wI" class=""><code>&lt;dd&gt;</code></td><td id="ZRvy" class="">description</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><hr id="320e6cdd-cb30-8008-9122-db3412aeec9b"/></div><div style="display:contents" dir="auto"><h2 id="320e6cdd-cb30-8030-bac8-d54599536309" class="">Example</h2></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-805c-9450-ef499aa88029" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;dl&gt;
+   &lt;dt&gt;HTML&lt;/dt&gt;
+   &lt;dd&gt;Good language&lt;/dd&gt;
+   &lt;dd&gt;Easy learning&lt;/dd&gt;
+   &lt;dd&gt;Very useful&lt;/dd&gt;
+&lt;/dl&gt;</code></pre></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8027-80d1-f27a11ff53aa" class="">Result:</p></div><div style="display:contents" dir="ltr"><figure id="320e6cdd-cb30-806a-bdc6-cdb8806ad1f6" class="image"><a href="image_html.png"><img style="width:169.984375px" src="image_html.png"/></a></figure></div><div style="display:contents" dir="auto"><hr id="320e6cdd-cb30-8024-9f81-f262df551b8a"/></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Html 3</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="320e6cdd-cb30-8001-a157-ff215899ff95" class="page sans"><header><h1 class="page-title" dir="auto">Html 3</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><h1 id="320e6cdd-cb30-807a-a846-f7005d0dde86" class="">1. Paragraph <code>&lt;p&gt;</code></h1></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-80ac-a702-e9ddd32cb6db" class="">A paragraph is the most basic text element.</p></div><div style="display:contents" dir="auto"><h3 id="320e6cdd-cb30-8024-8a53-e533ac564dea" class="">Syntax</h3></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-8057-8bf9-ee95752fcd8c" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;p&gt;This is a paragraph&lt;/p&gt;</code></pre></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-802c-a85c-c97c2b014899" class="">Each <code>&lt;p&gt;</code> starts on a <strong>new line</strong>.</p></div><div style="display:contents" dir="auto"><hr id="320e6cdd-cb30-8001-958d-c3aa354a8d7a"/></div><div style="display:contents" dir="auto"><h1 id="320e6cdd-cb30-80e2-a319-cdadd6705e2c" class="">2. Bold Text</h1></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8004-bad8-c0eb9649e41a" class="">There are <strong>two ways to make text bold</strong>.</p></div><div style="display:contents" dir="auto"><h3 id="320e6cdd-cb30-80af-bca8-f3d2af767dfd" class="">1. <code>&lt;b&gt;</code></h3></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-806a-ac6a-ec07639b0f11" class="">Used only for <strong>visual bold style</strong>.</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-808c-99fd-db922620e485" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;b&gt;Important&lt;/b&gt;</code></pre></div><div style="display:contents" dir="auto"><hr id="320e6cdd-cb30-8097-a775-d79242399fbe"/></div><div style="display:contents" dir="auto"><h3 id="320e6cdd-cb30-804b-9d3d-d3dcef3c28f6" class="">2. <code>&lt;strong&gt;</code></h3></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-80fd-bb4b-d2c65607fed4" class="">Used for <strong>important text</strong> (semantic meaning).</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-8006-8258-d6094ecc3c06" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;strong&gt;Important text&lt;/strong&gt;</code></pre></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-80d3-9655-e485ba383c7b" class="">Browsers display both as <strong>bold</strong>, but <code>&lt;strong&gt;</code> means the text is <strong>important</strong>.</p></div><div style="display:contents" dir="auto"><hr id="320e6cdd-cb30-8044-8054-ea09a767af98"/></div><div style="display:contents" dir="auto"><h1 id="320e6cdd-cb30-8046-89b6-e0fa092d3b68" class="">3. Smaller Text</h1></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-80bb-b189-f8cb9df3a08b" class="">Use:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-80b7-bdac-c51d9132f995" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;small&gt;text&lt;/small&gt;</code></pre></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-80d6-a5b1-ea7c0af235e9" class="">Example:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-8055-97ab-d3ede9187b27" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;p&gt;This is normal text&lt;/p&gt;
+&lt;small&gt;This is smaller text&lt;/small&gt;</code></pre></div><div style="display:contents" dir="auto"><hr id="320e6cdd-cb30-80dd-a29b-ccbbb6c47d30"/></div><div style="display:contents" dir="auto"><h1 id="320e6cdd-cb30-80dc-bc13-cb83ea758228" class="">4. Italic Text</h1></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-80e2-8751-f59873667793" class="">Two tags exist.</p></div><div style="display:contents" dir="auto"><h3 id="320e6cdd-cb30-80b3-b7ad-e1b1bdfbc351" class="">1. <code>&lt;i&gt;</code></h3></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-80db-bd45-e8009cd70e02" class="">Just makes text italic.</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-802a-8f32-e8c4b5b309e2" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;i&gt;italic text&lt;/i&gt;</code></pre></div><div style="display:contents" dir="auto"><hr id="320e6cdd-cb30-80ac-bd3b-da3a5c395a90"/></div><div style="display:contents" dir="auto"><h3 id="320e6cdd-cb30-8022-b5f9-cfb91247f611" class="">2. <code>&lt;em&gt;</code></h3></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-80d2-b7c0-cff55896a307" class="">Means <strong>emphasized text</strong>.</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-8074-9a90-ffa9a909e40f" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;em&gt;important emphasis&lt;/em&gt;</code></pre></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-806e-8518-fe2787d9a549" class="">Browsers usually display it as italic.</p></div><div style="display:contents" dir="auto"><hr id="320e6cdd-cb30-80c7-94f9-f75b5f7110c9"/></div><div style="display:contents" dir="auto"><h1 id="320e6cdd-cb30-8069-a199-e9fefbf90d81" class="">5. Quotation <code>&lt;blockquote&gt;</code></h1></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8040-a50c-c8dd9b450f20" class="">Used for <strong>long quotations</strong>.</p></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-804c-912b-ef85f54e99f5" class="">Example:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-809f-ae7d-cf3af89cc1bf" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;blockquote&gt;
+HTML is the structure of the web.
+&lt;/blockquote&gt;</code></pre></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-80c1-af6a-e8d39165a73f" class="">Browsers usually indent the quote.</p></div><div style="display:contents" dir="auto"><hr id="320e6cdd-cb30-8007-ba14-f1c22a448557"/></div><div style="display:contents" dir="auto"><h1 id="320e6cdd-cb30-803b-8fd8-c0ef637af8aa" class="">6. Short Quote <code>&lt;q&gt;</code></h1></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8089-9cb6-e74baa15c344" class="">Used for <strong>short quotes inside text</strong>.</p></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-807e-98c7-da98d02552e7" class="">Example:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-80a8-9009-dc447b838083" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;p&gt;He said &lt;q&gt;HTML is easy&lt;/q&gt;&lt;/p&gt;</code></pre></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-80fe-83b2-cc7cd6517730" class="">Result:</p></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-80c8-bd94-c45ed425d892" class="">He said “HTML is easy”.</p></div><div style="display:contents" dir="auto"><hr id="320e6cdd-cb30-80f9-89e3-eb9a840fdddc"/></div><div style="display:contents" dir="auto"><h1 id="320e6cdd-cb30-80da-b925-e122da158f5c" class="">7. Highlighted Text <code>&lt;mark&gt;</code></h1></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-806f-920f-c13770c71a69" class="">Used to <strong>highlight text</strong>.</p></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-806c-848d-c7cefc5121cb" class="">Example:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-808e-855d-f416374cb971" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;mark&gt;Important word&lt;/mark&gt;</code></pre></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8098-90d1-d20e6cb8ce39" class="">Browsers show it with <strong>yellow background</strong>.</p></div><div style="display:contents" dir="auto"><hr id="320e6cdd-cb30-8041-ad63-d9a0a16ce613"/></div><div style="display:contents" dir="auto"><h1 id="320e6cdd-cb30-8022-9b09-dc679399bc23" class="">8. Underlined Text <code>&lt;u&gt;</code></h1></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8039-942f-f10cd691d07b" class="">Example:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-8073-9dbb-e1331d1c4d9d" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;u&gt;This word is underlined&lt;/u&gt;</code></pre></div><div style="display:contents" dir="auto"><hr id="320e6cdd-cb30-800c-b526-f1714d6ad90a"/></div><div style="display:contents" dir="auto"><h1 id="320e6cdd-cb30-80e1-8bef-c69ca63a1f62" class="">9. Deleted Text <code>&lt;del&gt;</code></h1></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-802d-845b-de0720f0c3e7" class="">Shows text that has been <strong>removed</strong>.</p></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-80eb-9975-dee196630fc1" class="">Example:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-8076-a78c-f5131ff9e26a" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;del&gt;This is wrong&lt;/del&gt;</code></pre></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8004-87ec-e70d8c9d3646" class="">Result:</p></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-80e0-834b-ed57bb4b9e74" class=""><del>This is wrong</del></p></div><div style="display:contents" dir="auto"><hr id="320e6cdd-cb30-8016-8860-c089925cfe3a"/></div><div style="display:contents" dir="auto"><h1 id="320e6cdd-cb30-8039-b6ae-ce6e9160db43" class="">10. Inserted Text <code>&lt;ins&gt;</code></h1></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8049-b402-e8610f0aa71e" class="">Shows <strong>newly inserted text</strong>.</p></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8055-8b21-c16fe7cec294" class="">Example:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-8068-9e0d-d0214eb4986c" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;ins&gt;This is new&lt;/ins&gt;</code></pre></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-80c2-984d-d3e00bd040da" class="">Usually appears <strong>underlined</strong>.</p></div><div style="display:contents" dir="auto"><hr id="320e6cdd-cb30-8059-ad92-cfcefeb852dd"/></div><div style="display:contents" dir="auto"><h1 id="320e6cdd-cb30-802c-b1c2-dcc053db0445" class="">11. Superscript <code>&lt;sup&gt;</code></h1></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-807a-8b19-e20afb071637" class="">Used for <strong>powers in mathematics</strong>.</p></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-80cd-8235-db7ccf3204d8" class="">Example:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-8063-b23e-c3a865d4a0f1" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">5&lt;sup&gt;2&lt;/sup&gt;</code></pre></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8020-a997-f8763e563931" class="">Result:</p></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8071-bc1b-de28f81a2860" class="">5²</p></div><div style="display:contents" dir="auto"><hr id="320e6cdd-cb30-800d-ba5c-e09c2e80fc3f"/></div><div style="display:contents" dir="auto"><h1 id="320e6cdd-cb30-8051-8f40-ed7cc21d3a38" class="">12. Subscript <code>&lt;sub&gt;</code></h1></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-80c2-a3f3-c976a6becf6c" class="">Used for <strong>chemical formulas</strong>.</p></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8034-8f81-ecb2fe73a162" class="">Example:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-80ee-84ed-e8e6158527e6" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">H&lt;sub&gt;2&lt;/sub&gt;O</code></pre></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-800d-aec5-c213f12455a4" class="">Result:</p></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8080-be63-df8dc3c08e7c" class="">H₂O</p></div><div style="display:contents" dir="auto"><hr id="320e6cdd-cb30-803c-b981-ee2bc2bf946c"/></div><div style="display:contents" dir="auto"><h1 id="320e6cdd-cb30-80cb-bf70-fcefbf634acb" class="">13. Non-Breaking Space <code>&amp;nbsp;</code></h1></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8060-8a14-fa401a02fff0" class="">Normally HTML collapses spaces.</p></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-80da-9279-d2a284535b7d" class="">Example:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-8031-aa61-e2f0f24b98a8" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">Hello      World</code></pre></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-80f7-89e6-fd40a53eb233" class="">HTML will display:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-80c7-b46b-c12f20cc6172" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">Hello World</code></pre></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8073-9d3d-f2fe1f38da0c" class="">If you want extra space, use:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-803a-a0ca-d95b512da024" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&amp;nbsp;</code></pre></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8077-9352-d6e410679b04" class="">Example:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-80af-9376-ff0ce3eeceb1" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">Hello&amp;nbsp;&amp;nbsp;&amp;nbsp;World</code></pre></div><div style="display:contents" dir="auto"><hr id="320e6cdd-cb30-80c2-ae1b-ff0337b7b203"/></div><div style="display:contents" dir="auto"><h1 id="320e6cdd-cb30-80c0-88bf-ee380632e606" class="">14. HTML Entities</h1></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-803f-acee-c5da4148d6ba" class="">Some characters cannot be typed directly in HTML.</p></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-802f-88c0-cb5947b066f7" class="">They must use <strong>HTML entities</strong>.</p></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-8072-b4b8-e367b8f2d6ba" class="">An entity always starts with:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-8004-961b-c941632eabf6" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&amp;</code></pre></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-80db-a0b7-d56e151e90ca" class="">and ends with:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-80a3-b6b1-e6ff41f2eeec" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">;</code></pre></div><div style="display:contents" dir="auto"><hr id="320e6cdd-cb30-804a-98d6-ff3c68817477"/></div><div style="display:contents" dir="auto"><h2 id="320e6cdd-cb30-809b-b73d-e9b7459d2cd3" class="">Common HTML Entities</h2></div><div style="display:contents" dir="ltr"><table id="320e6cdd-cb30-8030-8c9e-c5ad06135667" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="320e6cdd-cb30-800d-a67b-fab5cbfeb3b2"><th id="A`b}" class="simple-table-header-color simple-table-header">Symbol</th><th id="CkT~" class="simple-table-header-color simple-table-header">Entity</th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="320e6cdd-cb30-8030-b990-fd1496ce40c8"><td id="A`b}" class="">&lt;</td><td id="CkT~" class=""><code>&amp;lt;</code></td></tr></div><div style="display:contents" dir="ltr"><tr id="320e6cdd-cb30-80a3-9d0d-c261050ede30"><td id="A`b}" class="">&gt;</td><td id="CkT~" class=""><code>&amp;gt;</code></td></tr></div><div style="display:contents" dir="ltr"><tr id="320e6cdd-cb30-8027-b9cd-f79bb7049665"><td id="A`b}" class="">&amp;</td><td id="CkT~" class=""><code>&amp;amp;</code></td></tr></div><div style="display:contents" dir="ltr"><tr id="320e6cdd-cb30-8003-9ad4-f972c98b1c5b"><td id="A`b}" class="">©</td><td id="CkT~" class=""><code>&amp;copy;</code></td></tr></div><div style="display:contents" dir="ltr"><tr id="320e6cdd-cb30-802d-9555-c073f670f794"><td id="A`b}" class="">®</td><td id="CkT~" class=""><code>&amp;reg;</code></td></tr></div><div style="display:contents" dir="ltr"><tr id="320e6cdd-cb30-80b4-a14c-d97961b9f431"><td id="A`b}" class="">€</td><td id="CkT~" class=""><code>&amp;euro;</code></td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><p id="320e6cdd-cb30-802f-b749-c77c3ddf7249" class="">Example:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="320e6cdd-cb30-80c3-a9bf-ccec535d2edf" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;p&gt;&amp;copy; 2026 My Website&lt;/p&gt;</code></pre></div><div style="display:contents" dir="auto"><hr id="320e6cdd-cb30-8058-b42e-d226cbe794f3"/></div><div style="display:contents" dir="auto"><h1 id="320e6cdd-cb30-803a-8363-e660b864e270" class="">16. Summary of Text Formatting Tags</h1></div><div style="display:contents" dir="ltr"><table id="320e6cdd-cb30-80d5-b6c9-e11117975805" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="320e6cdd-cb30-80e4-bdd3-e1aef92821e3"><th id="?\TV" class="simple-table-header-color simple-table-header">Tag</th><th id="[qg&gt;" class="simple-table-header-color simple-table-header">Purpose</th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="320e6cdd-cb30-8034-a7d3-e2a1b463087a"><td id="?\TV" class=""><code>&lt;p&gt;</code></td><td id="[qg&gt;" class="">paragraph</td></tr></div><div style="display:contents" dir="ltr"><tr id="320e6cdd-cb30-80cf-a9e1-da034aff5a91"><td id="?\TV" class=""><code>&lt;b&gt;</code></td><td id="[qg&gt;" class="">bold</td></tr></div><div style="display:contents" dir="ltr"><tr id="320e6cdd-cb30-80a0-8d0c-c0adce27a3e1"><td id="?\TV" class=""><code>&lt;strong&gt;</code></td><td id="[qg&gt;" class="">important bold</td></tr></div><div style="display:contents" dir="ltr"><tr id="320e6cdd-cb30-80a5-a010-cdac3a86ec7e"><td id="?\TV" class=""><code>&lt;i&gt;</code></td><td id="[qg&gt;" class="">italic</td></tr></div><div style="display:contents" dir="ltr"><tr id="320e6cdd-cb30-80c1-94b7-fa7abb834c4f"><td id="?\TV" class=""><code>&lt;em&gt;</code></td><td id="[qg&gt;" class="">emphasized text</td></tr></div><div style="display:contents" dir="ltr"><tr id="320e6cdd-cb30-8073-a67d-efb7f66ad28e"><td id="?\TV" class=""><code>&lt;small&gt;</code></td><td id="[qg&gt;" class="">smaller text</td></tr></div><div style="display:contents" dir="ltr"><tr id="320e6cdd-cb30-808e-b078-f91d433fa451"><td id="?\TV" class=""><code>&lt;mark&gt;</code></td><td id="[qg&gt;" class="">highlight</td></tr></div><div style="display:contents" dir="ltr"><tr id="320e6cdd-cb30-8047-86ee-cb12b3c8df77"><td id="?\TV" class=""><code>&lt;u&gt;</code></td><td id="[qg&gt;" class="">underline</td></tr></div><div style="display:contents" dir="ltr"><tr id="320e6cdd-cb30-80da-9108-ef4f81e95b27"><td id="?\TV" class=""><code>&lt;del&gt;</code></td><td id="[qg&gt;" class="">deleted text</td></tr></div><div style="display:contents" dir="ltr"><tr id="320e6cdd-cb30-809d-8eb5-e001f1eba03f"><td id="?\TV" class=""><code>&lt;ins&gt;</code></td><td id="[qg&gt;" class="">inserted text</td></tr></div><div style="display:contents" dir="ltr"><tr id="320e6cdd-cb30-806d-a635-d1734f662eda"><td id="?\TV" class=""><code>&lt;sup&gt;</code></td><td id="[qg&gt;" class="">superscript</td></tr></div><div style="display:contents" dir="ltr"><tr id="320e6cdd-cb30-80e3-a2d5-ecb892493b4b"><td id="?\TV" class=""><code>&lt;sub&gt;</code></td><td id="[qg&gt;" class="">subscript</td></tr></div><div style="display:contents" dir="ltr"><tr id="320e6cdd-cb30-8066-b4e3-c40cc58aaa3c"><td id="?\TV" class=""><code>&lt;blockquote&gt;</code></td><td id="[qg&gt;" class="">long quote</td></tr></div><div style="display:contents" dir="ltr"><tr id="320e6cdd-cb30-8090-bf4c-c1137e360987"><td id="?\TV" class=""><code>&lt;q&gt;</code></td><td id="[qg&gt;" class="">short quote</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><hr id="320e6cdd-cb30-801c-9c06-ca104eb7054f"/></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
